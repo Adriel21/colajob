@@ -36,7 +36,6 @@ class UserController extends Controller
             $name = $request->input('name'); 
             $email = $request->input('email');
             $password = $request->input('password'); 
-            $confirm = 0;
             $confirm = $validatedData['accept'] == 'accepted' ? 1 : 0;
 
 

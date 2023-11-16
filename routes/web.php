@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -38,9 +39,11 @@ Route::post('/cadastrar', [UserController::class, 'store']);
 
 Route::middleware(['auth'])->group(function () {
     // Rotas protegidas por autenticação
-    Route::get('/painel-cliente', function () {
-        return view('clientdashboard');
-    });
+    // Route::get('/painel-cliente', function () {
+    //     return view('clientdashboard');
+    // });
+
+    Route::get('/painel-cliente', [DashboardController::class, 'index']);
     Route::get('/painel-profissional', 'ProfileController@index')->name('profissional.dashboard');
     // Outras rotas protegidas...
 });

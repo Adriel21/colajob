@@ -24,6 +24,12 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
  
+            // Obtenha os dados do usuário autenticado
+            $user = Auth::user();
+
+            // Armazene os dados do usuário na sessão
+            $request->session()->put('user', $user);
+
             return redirect()->intended('/painel-cliente');
         }
  
