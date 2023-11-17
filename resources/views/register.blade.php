@@ -100,3 +100,5 @@
 
 	</div>
 
+	@include('components.footer')
+

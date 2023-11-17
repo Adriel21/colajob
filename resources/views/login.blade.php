@@ -50,4 +50,6 @@
 	</div>
 
 
-		</body>
+	</body>
+
+	@include('components.footer')
