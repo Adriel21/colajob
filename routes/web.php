@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
-use Illuminate\Support\Facades\Session;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -20,12 +19,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 */
 
 Route::get('/', function () {
-    // Recuperar dados da sessão pública
-    $publicUserData = Session::get('public_user');
-
-    // Faça algo com os dados...
-    
-    return view('home', ['publicUserData' => $publicUserData]);
+    return view('home');
 })->name('home');
 
 Route::get('/entrar', function () {

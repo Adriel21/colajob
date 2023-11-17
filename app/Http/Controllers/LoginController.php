@@ -44,6 +44,8 @@ class LoginController extends Controller
     public function logout() {
         Auth::logout();
 
+        // Remova ambas as chaves relacionadas ao usuário da sessão
+        session()->forget('user');
         // Redirecione para a página inicial ou outra página apropriada após o logout
         return redirect('/');
 

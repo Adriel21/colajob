@@ -1,3 +1,4 @@
+<!-- @dump(session()->all()) -->
 
 <!DOCTYPE html>
 
@@ -78,7 +79,7 @@
         </li>
 
 
-        @if(isset($publicUserData))
+        @if(session()->has('user'))
         <li class="nav-item m-1">
 
           <a class="nav-link btn text-uppercase fw-semibold" href="entrar">Quero Trabalhar</a>
@@ -95,9 +96,11 @@
 
         <li class="nav-item mx-1 dropdown d-flex flex-row justify-content-center">
           <a class="nav-link btn text-uppercase fw-semibold px-3 dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="d-inline-block me-2 bg-success rounded-circle" style="width: 10px; height: 10px;"></span> Online
+              <span class="d-inline-block me-2 bg-success rounded-circle" style="width: 10px; height: 10px;"></span> Meu Perfil
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="painel-cliente">Perfil Cliente</a></li>
+              <li><a class="dropdown-item" href="../admin/cadastro_atualiza.php">Me tornar Freelancer</a></li>
               <li><a class="dropdown-item" href="../admin/cadastro_atualiza.php">Editar Cadastro</a></li>
               <li><a class="dropdown-item" href="sair" >Sair</a></li>
           </ul>
@@ -128,8 +131,6 @@
 
 </section>
 
-
- 
 </header>
 
 
