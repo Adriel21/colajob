@@ -18,11 +18,15 @@
 
                   <div class="d-flex flex-column align-items-center text-center flex-lg-row text-lg-start justify-content-start gap-lg-2">
 
+                    @if($userData['profile_pic'])
                     <img src="../fotos_de_perfil/" class="perfil_freela_feed" alt="Admin" width="100">
-                  
+                    @else
+                    <img src="{{ asset('img/profile/user.png') }}" class="perfil_freela_feed" alt="Admin" width="100">
+                    @endif
+
                     <div class="mt-2 mt-lg-3">
 
-                      <h4 class="nome"></h4>
+                      <h4 class="nome">{{ $userData['name'] }}</h4>
 
                       <button button class="rounded-3 botao_perfil py-1 px-5 my-1 border-none fs-6" type="button">
 
@@ -53,7 +57,9 @@
 
                         
 
-                        <p class="text-lg-start"><a href="" class="text-center text-lg-start" target="_blank"><</a></p>
+                        <!-- <p class="text-lg-start"><a href="" class="text-center text-lg-start" target="_blank">https://www.exemplo.com.br</a></p> -->
+                        <p class="text-lg-start">https://www.exemplo.com.br</p>
+
 
                     </span>
 
@@ -101,44 +107,17 @@
                   </li>
 
 
-                    <h6 class="text-lg-start"><i class="bi bi-browser-chrome fs-4 "></i> Website</h6>
-
-                    <span class="text-secondary">
-
-                        <p class="text-lg-start">https://www.exemplo.com.br</p>
-
-                    </span>
+  
 
                   </li>
 
-                  <li class="list-group-item">
-
-                    <h6 class="text-lg-start"><i class="bi bi-linkedin fs-4"></i> linkedin</h6>
-
-                    <span class="text-secondary">
-
-                        <p class="text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
-
-                    </span>
-
-                  </li>
-
-                  <li class="list-group-item">
-
-                    <h6 class="text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
-
-                    <span class="text-secondary">
-
-                         <p class="text-lg-start">https://www.instagram.com/exemplo/</p></span>
-
-                  </li>
-
+                 
 
                   <li class="list-group-item text-lg-end">
 
                  
 
-                    <span class="text-secondary"><a href="redes_atualiza.php?perfil=cliente">Editar redes</a></span>
+                    <!-- <span class="text-secondary"><a href="redes_atualiza.php?perfil=cliente">Editar redes</a></span> -->
 
 
                     <span class="text-secondary"><a href="redes_insere.php?perfil=cliente">Inserir redes</a></span>
@@ -189,7 +168,7 @@
 
             
 
-        <div class="col-12 px-md-1 mt-2">
+        <!-- <div class="col-12 px-md-1 mt-2">
 
                   <div class="list-group">
 
@@ -209,7 +188,7 @@
 
                   </div>
 
-              </div>
+              </div> -->
 
 
                         <!-- <div class="contact-info-section margin-40px-tb">
@@ -283,3 +262,5 @@
     </section>
 
 </main>
+
+@include('components.footer')

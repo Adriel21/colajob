@@ -30,6 +30,12 @@
 
 
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+@if(session()->has('user'))
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+@endif   
+
+
+
 
 
 </head>
@@ -72,7 +78,33 @@
         </li>
 
 
+        @if(isset($publicUserData))
+        <li class="nav-item m-1">
 
+          <a class="nav-link btn text-uppercase fw-semibold" href="entrar">Quero Trabalhar</a>
+
+        </li>
+
+
+
+        <li class="nav-item m-1">
+
+          <a class="nav-link btn text-uppercase fw-semibold" href="cadastrar">Quero Contratar</a>
+
+        </li>
+
+        <li class="nav-item mx-1 dropdown d-flex flex-row justify-content-center">
+          <a class="nav-link btn text-uppercase fw-semibold px-3 dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="d-inline-block me-2 bg-success rounded-circle" style="width: 10px; height: 10px;"></span> Online
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="../admin/cadastro_atualiza.php">Editar Cadastro</a></li>
+              <li><a class="dropdown-item" href="sair" >Sair</a></li>
+          </ul>
+        </li>
+
+
+        @else   
         <li class="nav-item m-1">
 
           <a class="nav-link btn text-uppercase fw-semibold" href="entrar">Login</a>
@@ -86,6 +118,7 @@
           <a class="nav-link btn text-uppercase fw-semibold" href="cadastrar">Cadastro</a>
 
         </li>
+        @endif
 
       </ul>
 
@@ -96,81 +129,7 @@
 </section>
 
 
-  <!-- <nav class="navbar navbar-expand-lg">
-
-  <div class="container limitador">
-
-    <h1 class="ms-n1"><a class="navbar-brand logo" href="index.php"><img src="img/tecnologia.png" width="40"> Colajob</a></h1>
-
-
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-      <span class="navbar-toggler-icon"></span>
-
-    </button>
-
-
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-        <li class="nav-item m-1">
-
-          <a class="nav-link btn text-uppercase fw-semibold px-3" aria-current="page" href="index.php">Home</a>
-
-        </li>
-
-        
-
-          <li class="nav-item m-1">
-
-          <a class="nav-link btn text-uppercase fw-semibold px-3" href="admin/dashboard_freelancer.php">Visualizar Perfil Freelancer</a>
-
-        </li> 
-
-        <li class="active nav-item m-1">
-
-          <a class="nav-link btn text-uppercase fw-semibold px-3" href="admin/freelancer_insere.php">Cadastrar Perfil Freelancer</a>
-
-        </li>
-        
-
-
-
-        <li class="nav-item m-1">
-
-          <a class="nav-link btn text-uppercase fw-semibold px-3" href="admin/dashboard_cliente.php">Perfil Cliente</a>
-
-        </li>
-
-
-
-        <li class="nav-item m-1 dropdown">
-
-          <a class="nav-link btn text-uppercase fw-semibold px-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-
-            Online
-
-          </a>
-
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-            <li><a class="dropdown-item" href="admin/cadastro_atualiza.php">Editar Cadastro</a></li>
-
-            <li><a class="dropdown-item" href="index.php?sair" name="sair" >Sair</a></li>
-
-          </ul>
-
-        </li>
-
-    </div>
-
-  </div>
-
-</nav> -->
-
+ 
 </header>
 
 

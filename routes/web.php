@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Session;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -19,21 +20,24 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 */
 
 Route::get('/', function () {
-    return view('home');
+    // Recuperar dados da sessão pública
+    $publicUserData = Session::get('public_user');
+
+    // Faça algo com os dados...
+    
+    return view('home', ['publicUserData' => $publicUserData]);
 })->name('home');
 
 Route::get('/entrar', function () {
     return view('login');
-});
-
-Route::post('/entrar', [LoginController::class, 'authenticate'])->middleware('guest')->name('login');
-
+})->middleware('guest');
 
 Route::get('/cadastrar', function () {
     return view('register');
-});
+})->middleware('guest');
 
 
+Route::post('/entrar', [LoginController::class, 'authenticate'])->middleware('guest')->name('login');
 Route::post('/cadastrar', [UserController::class, 'store']);
 
 
@@ -45,6 +49,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/painel-cliente', [DashboardController::class, 'index']);
     Route::get('/painel-profissional', 'ProfileController@index')->name('profissional.dashboard');
+    Route::get('/sair', [LoginController::class, 'logout']);
     // Outras rotas protegidas...
 });
 

@@ -30,11 +30,22 @@ class LoginController extends Controller
             // Armazene os dados do usuário na sessão
             $request->session()->put('user', $user);
 
+            $request->session()->put('public_user', $user);
+
+
             return redirect()->intended('/painel-cliente');
         }
  
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
+    }
+
+    public function logout() {
+        Auth::logout();
+
+        // Redirecione para a página inicial ou outra página apropriada após o logout
+        return redirect('/');
+
     }
 }
