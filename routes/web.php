@@ -1,11 +1,9 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,20 +28,14 @@ Route::get('/cadastrar', function () {
     return view('register');
 })->middleware('guest');
 
-
 Route::post('/entrar', [LoginController::class, 'authenticate'])->middleware('guest')->name('login');
+
 Route::post('/cadastrar', [UserController::class, 'store']);
 
-
 Route::middleware(['auth'])->group(function () {
-    // Rotas protegidas por autenticação
-    // Route::get('/painel-cliente', function () {
-    //     return view('clientdashboard');
-    // });
-
     Route::get('/painel-cliente', [DashboardController::class, 'index']);
+    Route::get('/painel-cliente/cadastrar-perfil-freelancer', [DashboardController::class, 'openFreelancerRegistrationForm']);
     Route::get('/painel-profissional', 'ProfileController@index')->name('profissional.dashboard');
     Route::get('/sair', [LoginController::class, 'logout']);
-    // Outras rotas protegidas...
 });
 

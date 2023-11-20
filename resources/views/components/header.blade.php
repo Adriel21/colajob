@@ -100,7 +100,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="painel-cliente">Perfil Cliente</a></li>
-              <li><a class="dropdown-item" href="../admin/cadastro_atualiza.php">Me tornar Freelancer</a></li>
+              <li><a class="dropdown-item" href="painel-cliente/cadastrar-perfil-freelancer">Me tornar Freelancer</a></li>
               <li><a class="dropdown-item" href="../admin/cadastro_atualiza.php">Editar Cadastro</a></li>
               <li><a class="dropdown-item" href="sair" >Sair</a></li>
           </ul>

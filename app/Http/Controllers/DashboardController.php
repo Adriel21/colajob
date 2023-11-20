@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
- 
-use Illuminate\Support\Facades\Auth;
+
+use App\Models\Category;
 use Illuminate\Support\Facades\Session;
 
 
@@ -18,6 +18,14 @@ class DashboardController extends Controller
 
        // Faça algo com os dados do usuário
        // Por exemplo, passe os dados para a view
-       return view('clientdashboard', ['userData' => $userData]);
+       return view('admin/clientdashboard', ['userData' => $userData]);
    }
-    }
+
+   public function openFreelancerRegistrationForm(){
+        $categories = new Category();
+
+        $categoriesList = $categories->getAllCategories();
+
+        return view('admin/registerfreelancerprofile', ['categoriesData' => $categoriesList]);
+   }
+}
