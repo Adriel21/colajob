@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Freelancer;
+use App\Models\User;
 use Illuminate\Support\Facades\Session;
 
 
@@ -27,5 +30,29 @@ class DashboardController extends Controller
         $categoriesList = $categories->getAllCategories();
 
         return view('admin/registerfreelancerprofile', ['categoriesData' => $categoriesList]);
+   }
+
+   public function registerFreelancerProfile(Request $request){
+        $validatedData = $request->validate([
+            'titulo' => 'required|string|max:255',
+            'categoria' => 'required',
+            'descricao' => 'required|string|max:1000',
+        ]);
+
+        $userData = Session::get('user');
+
+         // Se a validação passar, os dados são válidos
+         $titulo = $request->input('titulo');
+         $descricao = $request->input('descricao');  
+         $categoria = $request->input('categoria');
+
+         $freelancer = new Freelancer();
+
+         $user = new User();
+         $user->updateUserFreelancerId($userData['id'], $freelancer->insertFreelancerProfile($titulo, $descricao, $userData['id'], $categoria));
+         
+
+         return redirect()->route('cliente');
+
    }
 }

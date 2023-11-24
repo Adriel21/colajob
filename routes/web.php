@@ -33,9 +33,10 @@ Route::post('/entrar', [LoginController::class, 'authenticate'])->middleware('gu
 Route::post('/cadastrar', [UserController::class, 'store']);
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/painel-cliente', [DashboardController::class, 'index']);
+    Route::get('/painel-cliente', [DashboardController::class, 'index'])->name('cliente');
     Route::get('/painel-cliente/cadastrar-perfil-freelancer', [DashboardController::class, 'openFreelancerRegistrationForm']);
     Route::get('/painel-profissional', 'ProfileController@index')->name('profissional.dashboard');
+    Route::post('/confirmar-cadastro-perfil-freelancer', [DashboardController::class, 'registerFreelancerProfile']);
     Route::get('/sair', [LoginController::class, 'logout']);
 });
 

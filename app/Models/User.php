@@ -20,7 +20,10 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password'
+        'password',
+        'phone',
+        'profile_pic',
+        'freelancer_id'
     ];
 
     public $timestamps = false;
@@ -42,5 +45,18 @@ class User extends Authenticatable
 
 
              return $user->id;
+    }
+
+    public function updateUserFreelancerId(int $id, int $freelancer_id){
+        $user = User::find($id);
+        
+        if ($user) {
+            $user->update([
+                'freelancer_id' => $freelancer_id
+            ]);
+    
+            // Se desejar, você pode retornar os dados atualizados
+            // return $freelancer->fresh()->toArray();
+        }
     }
 }

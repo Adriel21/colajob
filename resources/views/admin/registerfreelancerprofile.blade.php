@@ -7,9 +7,9 @@
 			<div class="col-12 col-lg-8 col-sm-12    ">
 			
 			
-				<form enctype="multipart/form-data" class="formulario-atualiza form-horizontal bg-form  p-sm-5 p-5 my-1 rounded" action="" method="POST">
-					
-				<div class="form-group mt-2 mb-4">
+				<form enctype="multipart/form-data" class="formulario-atualiza form-horizontal bg-form  p-sm-5 p-5 my-1 rounded" action="/confirmar-cadastro-perfil-freelancer" method="POST">
+				@csrf
+					<div class="form-group mt-2 mb-4">
 						<label for="titulo">Titulo: </label>
 						<input type="text" class="form-control" id="titulo"  name="titulo" placeholder="Ex: Engenheiro de Software" required>
 					</div>
@@ -25,7 +25,7 @@
 
 					<div class="form-group  mt-2">
 						<label for="descricao" class="pb-1">Descrição</label>
-						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descreva o seu projeto" minlength="150" required>
+						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descreva o seu projeto" required>
 						</textarea>
 					</div>
 

@@ -18,8 +18,7 @@ class LoginController extends Controller
             'password' => ['required'],
         ]);
 
-        // dump($credentials);
-        // die;
+      
  
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
