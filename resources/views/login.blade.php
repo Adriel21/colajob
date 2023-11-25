@@ -17,11 +17,7 @@
 			<div class="col-12 col-lg-6 p-sm-3 p-4">
 				<form class="form-horizontal shadow-lg bg-form shadow p-sm-5 p-3 rounded" action="{{ route('login') }}" method="POST">
 					@csrf
-					<!-- <div class="d-grid gap-2 text-center">
-						<button class="btn btn-primary google-button" type="button">Google</button>
-						<button class="btn btn-primary" type="button">LinkedIn</button>
-						<p class="my-2">OU</p>
-					</div> -->
+					
 					<div class="form-group mt-2">
 						<label for="email">Email</label>
 						<input type="email" class="form-control" id="email" name="email" placeholder="Digite seu email">
