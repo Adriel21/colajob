@@ -20,13 +20,13 @@
     
           <!-- img -->
         <picture class="col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-1">
-          <img class="img-responsive m-auto" src="{{ asset('img/home/img-pessoas-sinalizando-800.png') }}" alt="" width="100%" height="100%">
+          <img class="img-responsive m-auto" src="{{ asset('img/home/3d-cloud-storage.png') }}" alt="" width="100%" height="100%">
         </picture>
     </section>
     <!-- Primeiro finalizado -->
 
     <!-- Segundo Bloco -->
-    <section class="segna-bloco py-2" style="background-color: #0421B5;">
+    <section class="segna-bloco py-2">
         <section class="container row featurette my-5 py-3 m-auto flex-column-reverse flex-lg-row-reverse">
             <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
                 <h2 class="text-white display-4 fw-bold pe-lg-8">Profissionais diversos prontos para te ajudar.</h2>
@@ -42,7 +42,7 @@
               <!-- img -->
             <picture class="col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-1">
             
-              <img class="img-responsive m-auto" src="{{ asset('img/home/img-pessoas-olhando-celular-800.png') }}" alt="" width="100%" height="100%">
+              <img class="img-responsive m-auto" src="{{ asset('img/home/3d-tela-sentada.png') }}" alt="" width="100%" height="100%">
             </picture>
         </section>
     </section>
@@ -120,12 +120,8 @@
                     </div>
                 </div>
             </section>
-    </section>
-
-  
-</main>
-   
-<section class="segna-bloco py-1 px-3" style="background-color: #0421B5;">
+    </section>  
+    <section class="segna-bloco py-1 px-3" style="background-color: #0421B5;">
         <section class="container row featurette my-5 py-3 m-auto">
             <!-- row -->
             <div class="row align-items-center g-0 flex-column-reverse flex-lg-row">
@@ -134,21 +130,18 @@
                     <div>
                         <h1 class="text-white display-4 fw-bold pe-lg-8">Acreditamos na transformação da tecnologia.</h1>
                         <!-- text -->
-                        <p class="text-white mb-4 lead">
-                          Objetivamos ajudar pessoas a terem a oportunidade de atuarem de uma das formas que mais vem crescendo ultimamente - como Freelancers.
+                        <p class="text-white mb-4 lead">                          
+                            Objetivamos ajudar pessoas a terem a oportunidade de atuarem de uma das formas que mais vem crescendo ultimamente - como Freelancers.
                         </p>
-        
                     </div>
                 </div>
                 <!-- img -->
                 <picture class="col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-1">
-                    <img class="img-responsive m-auto" src="{{ asset('img/home/img-pessoas-fazendo-cadastro-800.png') }}" alt="" width="100%" height="100%">
+                    <img class="img-responsive m-auto" src="{{ asset('img/home/3d-tela-sentada.png') }}" alt="" width="100%" height="100%">
                 </picture>
             </div>
         </section>
     </section>
-
-
-
+</main>
 
 @include('components.footer')

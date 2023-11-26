@@ -2,12 +2,17 @@
 
 
 
+body {
+    background: rgb(246,245,255);
+    background: linear-gradient(90deg, rgba(246,245,255,1) 0%, rgba(230,241,255,1) 100%);
 
+    background-image: url("../img/home/bg-fundo2.png");
+    background-size: cover;
+}
 
 header{
-
-    background-color: white;
-
+    background: rgb(246,245,255);
+    background: linear-gradient(90deg, rgba(246,245,255,1) 0%, rgba(230,241,255,1) 100%);
     z-index: 9998 !important;
 
     font-family: 'Poppins';
@@ -66,6 +71,12 @@ a {
 
 }
 
+
+/* Bloco de destaque Home */
+.segna-bloco {
+    background: rgb(242,240,255);
+    background: linear-gradient(90deg, rgba(242,240,255,1) 0%, rgba(217,234,255,1) 100%);
+}
 
 
 /* configurações das imagens index */
@@ -191,7 +202,6 @@ picture img {
     }
 
 
-
      /* .marketing{
 
         box-shadow: initial;
@@ -213,8 +223,6 @@ picture img {
 
 
     .box-vagas {
-
-        
 
         background: rgba(164, 210, 221, 0.5);
 
