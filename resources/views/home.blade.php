@@ -12,7 +12,7 @@
                         Com a Colajob, você poderá encontrar muitos projetos que irão contribuir para o seu bolso e para ampliar seu portfólio. Aproveite a oportunidade e, veja se há algum que se encaixa com você!
                     </p>
 
-                <div class="d-grid gap-2 col-8 col-md-6 col-lg-6 mt-5 rounded">
+                <div class="d-grid gap-2 col-8 col-md-6 col-lg-6 mt-5">
                     <a href="projetos.php"><button class="botao_index btn me-md-2 w-100 p-2 px-4" type="button">Quero Trabalhar</button></a>
                 </div>
             </div>
@@ -53,14 +53,14 @@
     <section class="mt-5">
         <h2 class="display-4 fw-bold pe-lg-8 text-center">Você pode encontrar aqui!</h2>
             <section class="container row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 m-auto mt-3 mb-5">
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body h-100">
+                <div class="col animacao-card">
+                    <div class="card border-0 r-border">
+                        <div class="card-body hover-b">
                             <h5 class="card-title fw-semibold">Desenvolvedores</h5>
                             <img class="card-img-top mb-3" src="img/cards_index/desenvolvedores.jpg" alt="">
                             <p class="card-text">Aqui, você pode encontrar a ajuda necessária para desenvolver seu site ou aplicativo.</p>
-                            <a href="freelancers.php?id=1"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a>
-                            </button>
+                            <!-- <a href="freelancers.php?id=1"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a> 
+                            </button>-->
                         </div>
                     </div>
                 </div>
