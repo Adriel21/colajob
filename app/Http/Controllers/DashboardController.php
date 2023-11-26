@@ -50,7 +50,9 @@ class DashboardController extends Controller
 
          $user = new User();
          $user->updateUserFreelancerId($userData['id'], $freelancer->insertFreelancerProfile($titulo, $descricao, $userData['id'], $categoria));
-         
+
+          // Destruir a sessão atual
+          $request->session()->invalidate();
 
          return redirect()->route('cliente');
 

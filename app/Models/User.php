@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\HasOne;
 
 class User extends Authenticatable
 {
@@ -35,6 +36,11 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public function freelancer(): HasOne
+    {
+        return $this->freelancer(Freelancer::class);
+    }
+
     public function insertUser(string $name, string $email, string $password){
 
              $user = User::create([
@@ -59,4 +65,10 @@ class User extends Authenticatable
             // return $freelancer->fresh()->toArray();
         }
     }
+
+    public function selectUserWithFreelancerProfile() {
+        $user = User::join('');
+    }
+
+    
 }
