@@ -241,7 +241,7 @@ picture img {
           transform: translateY(20px);
         }
         to {
-          transform: translateY(0);
+          transform: translateX(0);
         }
       }
 
