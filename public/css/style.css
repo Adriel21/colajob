@@ -281,50 +281,58 @@ picture img {
     .card-body {
         /* background-image: url("../img/home/3d-cloud-storage.png"); */
         height: 70vh;
+
     }
 
-    .dev-border, .design-border, .redatores-border, .fotografos-border, .consultores-border, .professores-border {
+    .dev-cards, .design-cards, .redatores-cards, .fotografos-cards, .consultores-cards, .professores-cards {
+        border: 0;
         border-radius: 40px;
         padding: 20px;
 
-        transition: all 0.5;
-        cursor: pointer;
-        
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     }
+    
+    .animationCards {
+        transition: transform 1s;
+        cursor: pointer;
+    }
+
+  .animationCards:hover {
+    transform: translateX(1px) scale(1.03);
+    } 
 
     /* Card home Configuração das Imagens */
-    .dev-border {
+    .dev-cards {
         background-image: url("../img/home/BlueCardDesenvolvedor.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
-    .design-border {
+    .design-cards {
         background-image: url("../img/home/Card_design.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
-    .redatores-border {
+    .redatores-cards {
         background-image: url("../img/home/Card_redator.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
-    .fotografos-border {
+    .fotografos-cards {
         background-image: url("../img/home/Card_fotografo.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
-    .consultores-border {
+    .consultores-cards {
         background-image: url("../img/home/Card_consultor.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
-    .professores-border {
+    .professores-cards {
         background-image: url("../img/home/Card_professor.png");
         background-size: cover;
         background-position: center;
