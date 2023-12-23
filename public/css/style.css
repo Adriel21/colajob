@@ -293,7 +293,7 @@ picture img {
     }
     
     .animationCards {
-        transition: transform 1s;
+        transition: transform 0.5s;
         cursor: pointer;
     }
 
