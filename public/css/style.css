@@ -280,15 +280,17 @@ picture img {
 
     .card-body {
         /* background-image: url("../img/home/3d-cloud-storage.png"); */
-        height: 50vh;
+        height: 70vh;
     }
 
     .dev-border, .design-border, .redatores-border, .fotografos-border, .consultores-border, .professores-border {
-        border-radius: 6%;
+        border-radius: 40px;
         padding: 20px;
 
-        transition: all 0.5s;
+        transition: all 0.5;
         cursor: pointer;
+        
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     }
 
     /* Card home Configuração das Imagens */
@@ -299,33 +301,33 @@ picture img {
         background-repeat: no-repeat;
     }
     .design-border {
-        background-image: url("../img/home/3d-casual-life-graphic-design-software-on-laptop.png");
-        background-size: contain;
-        background-position: bottom 30px right 0px;
+        background-image: url("../img/home/Card_design.png");
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
     }
     .redatores-border {
-        background-image: url("../img/home/3d-casual-life-graphic-design-software-on-laptop.png");
-        background-size: contain;
-        background-position: bottom 30px right 0px;
+        background-image: url("../img/home/Card_redator.png");
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
     }
     .fotografos-border {
-        background-image: url("../img/home/3d-casual-life-graphic-design-software-on-laptop.png");
-        background-size: contain;
-        background-position: bottom 30px right 0px;
+        background-image: url("../img/home/Card_fotografo.png");
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
     }
     .consultores-border {
-        background-image: url("../img/home/3d-casual-life-graphic-design-software-on-laptop.png");
-        background-size: contain;
-        background-position: bottom 30px right 0px;
+        background-image: url("../img/home/Card_consultor.png");
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
     }
     .professores-border {
-        background-image: url("../img/home/3d-casual-life-graphic-design-software-on-laptop.png");
-        background-size: contain;
-        background-position: bottom 30px right 0px;
+        background-image: url("../img/home/Card_professor.png");
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
     }
     /* Final Card home Configuração das Imagens */

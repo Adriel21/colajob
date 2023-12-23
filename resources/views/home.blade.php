@@ -69,7 +69,7 @@
                     <div class="card border-0 design-border">
                         <div class="card-body hover-b">
                             <h5 class="card-title fw-semibold">Designers</h5>
-                            <img class="card-img-top mb-2" src="img/cards_index/designers.jpg" alt="">
+                          <!--   <img class="card-img-top mb-2" src="img/cards_index/designers.jpg" alt=""> -->
                             <p class="card-text">Encontre designers incriveis para construirem a identidade que você deseja.</p>
                             <!-- <a href="freelancers.php?id=2"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a> -->
                         </div>
@@ -80,7 +80,7 @@
                     <div class="card border-0 redatores-border">
                         <div class="card-body hover-b">
                             <h5 class="card-title fw-semibold">Redatores</h5>
-                            <img class="card-img-top mb-2" src="img/cards_index/redatores.jpg" alt="">
+                          <!--   <img class="card-img-top mb-2" src="img/cards_index/redatores.jpg" alt=""> -->
                             <p class="card-text">Precisando de alguém que elabore conteúdo para você? Que tal buscar um redator?</p>
                             <!-- <a href="freelancers.php?id=5"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a> -->
                         </div>
@@ -91,7 +91,7 @@
                     <div class="card border-0 fotografos-border">
                         <div class="card-body hover-b">
                             <h5 class="card-title fw-semibold">Fotógrafos</h5>
-                            <img class="card-img-top mb-2" src="img/cards_index/fotografos.jpg" alt="">
+                           <!--  <img class="card-img-top mb-2" src="img/cards_index/fotografos.jpg" alt=""> -->
                             <p class="card-text">Um bom fotógrafo pode te auxiliar a registrar momentos importantes da sua vida.</p>
                             <!-- <a href="freelancers.php?id=7"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a> -->
                         </div>
@@ -102,7 +102,7 @@
                     <div class="card border-0 consultores-border">
                         <div class="card-body hover-b">
                             <h5 class="card-title fw-semibold">Consultores</h5>
-                            <img class="card-img-top mb-2" src="img/cards_index/consultores.jpg" alt="">
+                            <!-- <img class="card-img-top mb-2" src="img/cards_index/consultores.jpg" alt=""> -->
                             <p class="card-text">Uma boa consultoria pode ajudar o seu negócio a alcançar o objetivo que deseja.</p>
                         <!--<a href="freelancers.php?id=6"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a> -->
                         </div>
@@ -113,7 +113,7 @@
                     <div class="card border-0 professores-border">
                         <div class="card-body hover-b">
                             <h5 class="card-title fw-semibold">Professores</h5>
-                            <img class="card-img-top mb-2" src="img/cards_index/professores.jpg" alt="">
+                            <!-- <img class="card-img-top mb-2" src="img/cards_index/professores.jpg" alt=""> -->
                             <p class="card-text">Gostaria de algumas aulas de reforço? Que tal encontrar um professor para te ajudar?</p>
                            <!--  <a href="freelancers.php?id=4"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a> -->
                         </div>
