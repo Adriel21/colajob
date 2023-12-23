@@ -7,7 +7,7 @@ body {
     background: linear-gradient(90deg, rgba(246,245,255,1) 0%, rgba(230,241,255,1) 100%);
 
     background-image: url("../img/home/bg-fundo2.png");
-    background-size: cover;
+    background-size:cover;
 }
 
 header{
@@ -46,10 +46,6 @@ header{
     color: blue !important;
 
 }
-
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); *
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 /* Configurações gerais */
 
@@ -270,7 +266,7 @@ picture img {
     }
 
 
-
+/* Card home Configuração das Imagens */
     .card-vagas h3 {
 
         font-weight: 500;
@@ -301,7 +297,7 @@ picture img {
     transform: translateX(1px) scale(1.03);
     } 
 
-    /* Card home Configuração das Imagens */
+    
     .dev-cards {
         background-image: url("../img/home/BlueCardDesenvolvedor.png");
         background-size: cover;
@@ -516,7 +512,15 @@ picture img {
 
 /* Footer Configurações final */
 
+footer {
+    background: rgb(246,245,255);
+    background: linear-gradient(90deg, rgba(246,245,255,1) 0%, rgba(230,241,255,1) 100%);
+}
 
+.space {
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
