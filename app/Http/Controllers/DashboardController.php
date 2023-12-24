@@ -16,23 +16,25 @@ class DashboardController extends Controller
      */
     public function index()
     {
-       // Recupere os dados do usuário da sessão
-       $userData = Session::get('user');
+        // Recupere os dados do usuário da sessão
+        $userData = Session::get('user');
 
-       // Faça algo com os dados do usuário
-       // Por exemplo, passe os dados para a view
-       return view('admin/clientdashboard', ['userData' => $userData]);
-   }
+        // Faça algo com os dados do usuário
+        // Por exemplo, passe os dados para a view
+        return view('admin/clientdashboard', ['userData' => $userData]);
+    }
 
-   public function openFreelancerRegistrationForm(){
+    public function openFreelancerRegistrationForm()
+    {
         $categories = new Category();
 
         $categoriesList = $categories->getAllCategories();
 
         return view('admin/registerfreelancerprofile', ['categoriesData' => $categoriesList]);
-   }
+    }
 
-   public function registerFreelancerProfile(Request $request){
+    public function registerFreelancerProfile(Request $request)
+    {
         $validatedData = $request->validate([
             'titulo' => 'required|string|max:255',
             'categoria' => 'required',
@@ -41,20 +43,21 @@ class DashboardController extends Controller
 
         $userData = Session::get('user');
 
-         // Se a validação passar, os dados são válidos
-         $titulo = $request->input('titulo');
-         $descricao = $request->input('descricao');  
-         $categoria = $request->input('categoria');
+        // Se a validação passar, os dados são válidos
+        $titulo = $request->input('titulo');
+        $descricao = $request->input('descricao');
+        $categoria = $request->input('categoria');
 
-         $freelancer = new Freelancer();
+        $freelancer = new Freelancer();
 
-         $user = new User();
-         $user->updateUserFreelancerId($userData['id'], $freelancer->insertFreelancerProfile($titulo, $descricao, $userData['id'], $categoria));
+        $user = new User();
+        $freelancerId = $freelancer->insertFreelancerProfile($titulo, $descricao, $userData['id'], $categoria);
+        $user->updateUserFreelancerId($userData['id'], $freelancerId);
 
-          // Destruir a sessão atual
-          $request->session()->invalidate();
+        // Adicionando mais um dado a sessão já existente
+        Session::put('user', $freelancerId);
 
-         return redirect()->route('cliente');
 
-   }
+        return redirect()->route('cliente');
+    }
 }
