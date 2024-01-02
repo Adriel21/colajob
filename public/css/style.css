@@ -72,8 +72,12 @@ a {
 
 /* Bloco de destaque Home */
 .segna-bloco {
-    background: rgb(242,240,255);
-    background: linear-gradient(90deg, rgba(242,240,255,1) 0%, rgba(217,234,255,1) 100%);
+/*     background: rgb(242,240,255);
+    background: linear-gradient(90deg, rgba(242,240,255,1) 0%, rgba(217,234,255,1) 100%); */
+
+    background: rgb(218,229,251);
+    background: linear-gradient(90deg, rgba(218,229,251,1) 35%, rgba(237,242,253,1) 100%);
+
 }
 
 .text-white {
@@ -303,36 +307,51 @@ picture img {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+
+        color: white !important;
+        font-size: 1.2rem;
     }
     .design-cards {
         background-image: url("../img/home/Card_design.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        
+        font-size: 1.2rem;
     }
     .redatores-cards {
         background-image: url("../img/home/Card_redator.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+
+        color: white !important;
+        font-size: 1.2rem;
     }
     .fotografos-cards {
         background-image: url("../img/home/Card_fotografo.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        
+        font-size: 1.2rem;
     }
     .consultores-cards {
         background-image: url("../img/home/Card_consultor.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+
+        color: white !important;
+        font-size: 1.2rem;
     }
     .professores-cards {
         background-image: url("../img/home/Card_professor.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        
+        font-size: 1.2rem;
     }
     /* Final Card home Configuração das Imagens */
 
