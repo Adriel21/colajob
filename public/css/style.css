@@ -5,9 +5,6 @@
 body {
     background: rgb(246,245,255);
     background: linear-gradient(90deg, rgba(246,245,255,1) 0%, rgba(230,241,255,1) 100%);
-
-    background-image: url("../img/home/bg-fundo2.png");
-    background-size:cover;
 }
 
 header{
@@ -18,8 +15,6 @@ header{
     font-family: 'Poppins';
 
 }
-
-
 
 .logo{
 
@@ -69,6 +64,10 @@ a {
 
 }
 
+.hv-section-hero {
+    background-image: url("../img/home/bg-fundo2.png");
+    background-size: cover;
+}
 
 /* Bloco de destaque Home */
 .segna-bloco {
@@ -550,6 +549,13 @@ footer {
         height: 100%;
 
     }
+}
 
+@media (max-width: 1024px) {
+
+    .hv-section-hero {
+        background-image: none;
+       }
+   
 }
 
