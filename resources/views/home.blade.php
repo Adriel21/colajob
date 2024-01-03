@@ -135,9 +135,13 @@
                     <div>
                         <h1 class="text-white display-4 fw-bold pe-lg-8">Acreditamos na transformação da tecnologia.</h1>
                         <!-- text -->
-                        <p class="text-white mb-4 lead">                          
-                            Objetivamos ajudar pessoas a terem a oportunidade de atuarem de uma das formas que mais vem crescendo ultimamente - como Freelancers.
+                        <p class="mb-4 lead">                          
+                            Objetivamos ajudar pessoas a terem a oportunidade de<br>atuarem de uma das formas que mais vem crescendo<br>ultimamente - como Freelancers.
                         </p>
+
+                        <div class="d-grid gap-1 col-8 col-md-6 col-lg-6 mt-5 rounded">
+                        <a href="freelancers.php"><button class="botao_index btn me-md-2 w-100 p-2 px-4" type="button">Procuro Profissional</button></a>
+                    </div>
                     </div>
                 </div>
                 <!-- img -->
